@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Dungeon</title>
 
@@ -79,7 +80,7 @@
     </head>
     <body>
 
-    	<div class="container-fluid">
+    	<div class="container-fluid" id="board">
 
 	    	<div class="col-md-3">
 				<div class="panel panel-default">
@@ -90,7 +91,7 @@
 						<ul class="sortable-board connected-sortable">
 							<li>
 								<div class="board-card">
-									<p><a href="$">TID-0934</a> - This is a user story that will do something cool!</p>
+									<p><a href="#">TID-0934</a> - This is a user story that will do something cool!</p>
 									<p style="color:#999;font-size:0.9em;">
 										<i class="fa fa-check-square" aria-hidden="true"></i> 6 - 
 										<i class="fa fa-paperclip" aria-hidden="true"></i> 5 - 
@@ -103,7 +104,7 @@
 							<li>
 
 								<div class="board-card">
-									<p><a href="$">TID-8345</a> - Simple ticket</p>
+									<p><a href="#">TID-8345</a> - Simple ticket</p>
 									<p style="color:#999;font-size:0.9em;">
 										<i class="fa fa-paperclip" aria-hidden="true"></i> 5
 									</p>
@@ -113,7 +114,7 @@
 							<li>
 
 								<div class="board-card">
-									<p><a href="$">TID-1643</a> - OMG the billing process will support bitcoins... or not</p>
+									<p><a href="#">TID-1643</a> - OMG the billing process will support bitcoins... or not</p>
 									<p style="color:#999;font-size:0.9em;">
 										<i class="fa fa-check-square" aria-hidden="true"></i> 6 - 
 										<i class="fa fa-paperclip" aria-hidden="true"></i> 5
@@ -125,7 +126,7 @@
 
 							<li>
 								<div class="board-card">
-									<p><a href="$">TID-0434</a> - Maybe we should do something about this</p>
+									<p><a href="#">TID-0434</a> - Maybe we should do something about this</p>
 									<p style="color:#999;font-size:0.9em;">
 										<i class="fa fa-check-square" aria-hidden="true"></i> 6 - 
 										<i class="fa fa-clock-o" aria-hidden="true"></i> Jul 05
@@ -185,6 +186,11 @@
 									<p><span class="label label-success">Feature</span></p>
 								</div>
 							</li>
+
+							<card></card>
+							<card></card>
+							<card></card>
+
 						</ul>
 					</div>
 				</div>
@@ -198,15 +204,8 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    	<script src="{{ mix('js/app.js') }}"></script>
 
-		<script>
-			$( function() {
-				$( ".sortable-board" ).sortable({
-					placeholder: "ui-state-highlight",
-					connectWith: ".connected-sortable"
-				}).disableSelection();
-			} );
-		</script>
 
     </body>
 </html>

@@ -8,7 +8,8 @@ window._ = require('lodash');
  */
 
 try {
-    window.$ = window.jQuery = require('jquery');
+    //window.$ = window.jQuery = require('jquery'); 
+    //had to comment this out to make sortable usable
 
     require('bootstrap-sass');
 } catch (e) {}
