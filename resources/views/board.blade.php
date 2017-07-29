@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid">
+<div id="board" class="container-fluid">
     <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-heading">
