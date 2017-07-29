@@ -25,4 +25,15 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Displays the confirmation email or verify through
+     * phone page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function confirmation()
+    {
+        return view('confirmation');
+    }
 }
